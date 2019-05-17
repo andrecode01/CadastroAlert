@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8">
+  	<meta name="description" content="">
+  	<meta name="keywords" content="">
+  	<meta name="author" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Aprendendo JavaScript</title>
+
+	<style>
+		
+		body{
+			padding: 0;
+			margin: 0;
+			text-align: center;
+
+			background: rgba(100,255,100, .75);
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<script>
+
+		function trocarimagem(){
+
+			var tagImg = document.getElementById("imgBolo");
+			
+
+			if (tagImg.src.match("boloff.png")){
+
+				tagImg.src="bolon.png";
+
+
+			} else {
+
+				tagImg.src="boloff.png";
+
+			}
+
+		}
+
+		
+	</script>
+
+	<h3>Clique no bolo para acender ou apagar a vela.</h3>
+
+
+	<p>
+		<img id="imgBolo" onclick="trocarimagem()" src="boloff.png" width="512">
+	</p>
+	
+</body>
+</html>

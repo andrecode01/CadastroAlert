@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<title>PPI</title>
+
+	<meta charset="UTF-8">
+  	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="John Doe">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  	<style>
+
+  	body{
+  		padding: 0;
+  		margin: 0;
+  	}
+  		
+  	.hidden{
+
+  		display: none;
+  	}
+
+  	fieldset p span{
+
+  		color: darkred;
+  		font-weight: bold;
+  		margin-left: 5px; 
+
+  	}
+
+
+
+  	</style>
+
+</head>
+<body>
+
+	<script>
+		
+		function Cadastrar(){
+
+			var cadastrar = document.getElementById("hidden");
+
+			var nome = document.getElementById("nome").value;
+			var email = document.getElementById("email").value;
+			var data = document.getElementById("data").value;
+
+			cadastrar.classList.remove("hidden");
+
+			alert("Nome: "+nome+"E-mail: "+email+"Data: "+data);
+
+		}
+
+	</script>
+
+
+	<div id="hidden" class="w3-panel w3-green hidden">
+  	  <h3>Successo!</h3>
+	  <p>Cadastrado com sucesso</p>
+	</div>
+
+
+	<fieldset>
+			
+			<legend>Cadastro</legend>
+
+			<p>
+				<label>Nome:</label><br>
+				<input id="nome" type="text" name=""><span>*</span>
+			</p>
+
+			<p>
+				<label>e-mail</label><br>
+				<input id="email" type="email" name="">
+			</p>
+
+			<p>
+				<label>Data de Nascimento:</label><br>
+				<input id="data" type="date" name=""><span>*</span>
+			</p>
+
+			<p>
+				<label>Senha:></label><br>
+				<input type="password" name=""><span>*</span>
+			</p>
+			<p>
+				<label>Repita a Senha:></label><br>
+				<input type="password" name=""><span>*</span>
+			</p>
+
+			<p>
+				<input type="submit" name="" value="Cadastar" onclick="Cadastrar()">
+			</p>
+
+	</fieldset>
+
+
+
+</body>
+</html>
